@@ -32,25 +32,25 @@ public class Clase21_Arrays {
         final double SALDO_INICIAL = 10000;
 
         // Número de filas (representan las diferentes tasas de interés)
-        final int FILAS = 6;
+        final int NUM_TASAS_INTERES = 6;
 
         // Número de columnas (representan los años)
-        final int COLUMNAS = 5;
+        final int NUM_AÑOS = 5;
 
         // Variables para almacenar el saldo acumulado y la tasa de interés inicial
         double acumulado;
         double interes = 0.10;
 
         // Array bidimensional para almacenar los saldos acumulados
-        double saldo[][] = new double[FILAS][COLUMNAS];
+        double saldo[][] = new double[NUM_TASAS_INTERES][NUM_AÑOS];
 
         // Cálculo del saldo acumulado año por año
-        for (int i = 0; i < FILAS; i++) {
+        for (int i = 0; i < NUM_TASAS_INTERES; i++) {
             saldo[i][0] = SALDO_INICIAL; // Saldo inicial para el primer año
             acumulado = SALDO_INICIAL;
             
             // Cálculo del saldo acumulado para cada año
-            for (int j = 1; j < COLUMNAS; j++) {
+            for (int j = 1; j < NUM_AÑOS; j++) {
                 acumulado += acumulado * interes; // Incremento por interés
                 saldo[i][j] = acumulado; // Almacena el saldo acumulado
             }
@@ -61,12 +61,12 @@ public class Clase21_Arrays {
 
         // Imprimir los resultados de los saldos acumulados
         System.out.println("Saldos acumulados:");
-        for (int z = 0; z < COLUMNAS; z++) {
-            System.out.println(); // Nueva línea para mejor legibilidad
-            for (int h = 0; h < FILAS; h++) {
+        for (int z = 0; z < NUM_AÑOS; z++) {
+            System.out.printf("Año %d: ", z);
+            for (int h = 0; h < NUM_TASAS_INTERES; h++) {
                 System.out.printf("%1.2f ", saldo[h][z]); // Imprime con dos decimales
-                System.out.print(" ");
             }
+            System.out.println(); // Nueva línea para mejor legibilidad
         }
     }
 }
