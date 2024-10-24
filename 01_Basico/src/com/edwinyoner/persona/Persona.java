@@ -8,13 +8,6 @@ package com.edwinyoner.persona;
  * También permite mostrar información detallada de cada persona, incluyendo su número en la lista de creación.
  * 
  * @author Edwin Yoner
- * @version 23/10/2024
- */
-/**
- * 
- * Persona.java
- *
- * @author Edwin Yoner
  * @version 24/10/2024
  */
 public class Persona {
