@@ -1,4 +1,4 @@
-package com.edwinyoner.coche;
+package com.edwinyoner.paquete01.coche;
 
 /**
  * CocheControlador.java

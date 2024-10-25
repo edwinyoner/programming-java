@@ -1,4 +1,4 @@
-package com.edwinyoner.persona;
+package com.edwinyoner.paquete02.persona;
 
 /**
  * Persona.java
